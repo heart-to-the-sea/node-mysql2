@@ -6,11 +6,11 @@ const connect = createConnection({
   database: 'mysql',
   debug: true,
 })
-// connect.query("select * from user",(e,r)=>{
-//     if (e) {
-//       console.log(e);
-//     }
-//     console.log("结果为");
+connect.query("select * from user",(e,r)=>{
+    if (e) {
+      console.log(e);
+    }
+    console.log("结果为");
     
-//     // console.log(r);
-// })
+    // console.log(r);
+})

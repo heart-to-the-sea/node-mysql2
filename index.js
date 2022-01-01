@@ -9,7 +9,7 @@ const parserCache = require('./lib/parsers/parser_cache');
 exports.createConnection = function(opts) {
   const config = new ConnectionConfig(opts);
 
-  // console.log('createConnection',opts);
+  console.log('createConnection',opts);
   // console.log('config', config);
   return new Connection({ config });
 };
