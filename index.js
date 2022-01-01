@@ -7,7 +7,11 @@ const ConnectionConfig = require('./lib/connection_config.js');
 const parserCache = require('./lib/parsers/parser_cache');
 
 exports.createConnection = function(opts) {
-  return new Connection({ config: new ConnectionConfig(opts) });
+  const config = new ConnectionConfig(opts);
+
+  // console.log('createConnection',opts);
+  // console.log('config', config);
+  return new Connection({ config });
 };
 
 exports.connect = exports.createConnection;
